@@ -1,0 +1,49 @@
+
+
+<!DOCTYPE html>
+{% load bootstrap4 %}
+{% load static %}
+<html lang="en">
+<head>
+    {% bootstrap_css %}
+    <link href="{% static 'css/create-task-styles.css' %}" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <title>Criar tarefa</title>
+</head>
+<body>
+    {% include 'fixed-return-button.html' %}
+    <div class="container">
+        <div class="mb-5 mt-5 text-center text-secondary"><span class="span-title">Administrar tarefa</span><hr></div>
+        <br>
+        <p class="text-center text-warning">adicionar / editar</p>
+        <form autocomplete="off" id="this-form" method="post">
+            {% csrf_token %}
+            {% bootstrap_messages %}
+            <div class="row">
+                <div class="form-group ma">
+                    <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 ma">
+                        <!-- Campo de criação/edição -->
+                        <label class="sr-only" for="task">Campo para reescrever/escrever uma nova tarefa</label>
+                        <input type="text" class="form-control mb-2" id="task" name="task" placeholder="reescreva/escreva aqui sua tarefa" size="70">
+
+                        <!-- Botão de criar -->
+                        <div class="text-right">
+                            <button class="btn btn-dark mt-3" form="this-form" type="submit">
+                                <a class="text-white">Salvar</a>
+                            </button>
+                        </div>
+
+                        <!-- Botão de cancelar -->
+                        <div class="text-right">
+                            <a class="btn btn-danger mt-3" href="{% url 'mytasks' %}">Voltar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+{% bootstrap_javascript jquery='full' %}
+</body>
+</html>

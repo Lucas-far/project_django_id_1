@@ -1,0 +1,37 @@
+
+
+<!DOCTYPE html>
+{% load bootstrap4 %}
+{% load static %}
+<html lang="en">
+<head>
+    {% bootstrap_css %}
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet"> <!-- font-family: Itim -->
+    <link href="{% static 'css/sign-in-styles.css' %}" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Criar uma conta</title>
+</head>
+
+<body>
+    {% include 'fixed-return-button.html' %}
+    <main>
+        <div class="container">
+            <form action="{% url 'signin' %}" autocomplete="off" id="this-form" method="post">
+                <fieldset class="fieldset pb30px text-center">Login</fieldset>
+                {% csrf_token %}
+                {% bootstrap_messages %}
+                {% include 'sign-in-form.html' %}
+            </form>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="ma mt-3">
+                    <button class="btn btn-dark" type="submit" form="this-form">Logar</button>
+                </div>
+            </div>
+        </div>
+    </main>
+{% bootstrap_javascript jquery='full' %}
+</body>
+</html>

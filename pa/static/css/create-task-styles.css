@@ -1,0 +1,15 @@
+
+
+body {background-color: #171A21;}
+.btn-dark:hover a {text-decoration: none;}
+.ma {margin: auto;}
+.span-title {color: #ff4500; font-size: 3em;}
+/*span {animation: sideways alternate infinite 2s; font-size: 3em;}*/
+hr {background-color: #ff4500; height: 3px; box-shadow: 0 0 50px #ff4500; border-radius: 10px;}
+
+/*
+@keyframes sideways {
+    0% {padding-left: 10px;}
+    100% {padding-right: 10px;}
+}
+*/

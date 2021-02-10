@@ -1,0 +1,10 @@
+
+
+body {background-color: #171A21; color: #c7d5e0;}
+.container-fluid {position: fixed; top: 0; background-color: #171A21;} /* cor de fundo deve ser = body */
+.btn-dark:hover a {text-decoration: none;}
+.ma {margin: auto;}
+.my-h1 {font-family: Itim;}
+hr {background-color: aqua; height: 3px; box-shadow: 0 0 50px aqua; border-radius: 10px;}
+.form-control {background-color: #171A21;}
+.form-control:focus {background-color: #171A21;}

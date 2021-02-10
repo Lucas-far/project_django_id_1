@@ -1,0 +1,37 @@
+
+
+body {background-color: #171A21; color: #0e3742;}
+.container-fluid {position: fixed; top: 0; background-color: #171A21;} /* cor de fundo deve ser = body */
+.btn-dark:hover a {text-decoration: none;}
+.fieldset {
+    font-size: 7em;
+    color: #fff;
+    text-shadow: 0 1px 10px #1b2838,
+                 0 2px 20px #2a475e,
+                 0 3px 0 #1b2838,
+                 0 4px 0 #2a475e,
+                 0 5px 0 #1b2838,
+                 0 6px 0 #2a475e,
+                 0 7px 0 #1b2838,
+                 0 8px 0 #2a475e,
+                 0 9px 0 #1b2838,
+                 0 10px 0 #2a475e;
+    }
+.blink-text {animation: blink-text linear infinite 15s;}
+.form-control {background-color: #171A21;}
+.form-control:focus {background-color: #171A21;}
+.ma {margin: auto;}
+
+@keyframes blink-text {
+    0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92% {
+        color: #fff; text-shadow: none;
+    }
+    18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100% {
+        color: #171A21;
+        text-shadow: 0 0 5px #03bcf4,
+                     0 0 6px #03bcf4,
+                     0 0 7px #03bcf4,
+                     0 0 8px #03bcf4,
+                     0 0 9px #03bcf4;
+    }
+}

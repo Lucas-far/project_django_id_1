@@ -1,0 +1,30 @@
+
+
+<!DOCTYPE html>
+{% load bootstrap4 %}
+{% load static %}
+<html lang="en">
+<head>
+    {% bootstrap_css %}
+    <link href="{% static 'css/delete-task-styles.css' %}" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <title>Página</title>
+</head>
+<body>
+    {% bootstrap_messages %}
+    <form autocomplete="off" method="post">
+        {% csrf_token %}
+        <div class="container mt-5 text-center">
+            <span class="this-span text-danger">Deletar</span>
+            <hr>
+            <p class="mt-5 text-danger">Você deseja deletar a tarefa em destaque?</p>
+            <p class="text-primary">{{ object }}</p>
+            <button class="btn btn-danger" type="submit">sim, delete!</button>
+            <a class="btn btn-primary" href="{% url 'mytasks' %}">não, voltar!</a>
+        </div>
+    </form>
+{% bootstrap_javascript jquery='full' %}
+</body>
+</html>

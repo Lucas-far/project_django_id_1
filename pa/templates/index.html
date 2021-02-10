@@ -1,0 +1,36 @@
+
+
+<!DOCTYPE html>
+{% load bootstrap4 %}
+{% load static %}
+<html lang="en">
+<head>
+    {% bootstrap_css %}
+    <link href="{% static 'css/index.css' %}" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta content="ie-edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <title>Página inicial</title>
+</head>
+<body>
+    {% bootstrap_messages %}
+    <div class="container mt-5 text-center">
+        {% if request.user.is_anonymous == True %}
+            <h2 class="text-secondary">Você está anônimo</h2>
+            <hr>
+            <p class="text-secondary">é preciso criar uma conta ou logar, para ter acesso ao site</p>
+            <!-- Opções para quem não está logado -->
+            <a class="btn btn-primary" href="{% url 'signup' %}">Criar conta</a>
+            <a class="btn btn-success" href="{% url 'signin' %}">Login</a>
+
+        {% else %}
+            <a class="btn btn-dark text-danger mb-3" href="{% url 'signout' %}">Deslogar</a>
+            <h2 class="mb-5 this-h2">Seja bem-vindo, {{ request.user }}</h2>
+            <hr>
+            <div class="mt-2"><a class="btn btn-success" href="{% url 'mytasks' %}">Ver tarefas</a></div>
+            <div class="mt-2"><a class="btn btn-primary" href="{% url 'createtask' %}">Adicionar tarefa</a></div>
+        {% endif %}
+    </div>
+{% bootstrap_javascript jquery='full' %}
+</body>
+</html>
