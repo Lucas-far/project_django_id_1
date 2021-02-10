@@ -2,6 +2,7 @@
 
 [![Updates](https://pyup.io/repos/github/Lucas-far/attempt_api/shield.svg)](https://pyup.io/repos/github/Lucas-far/attempt_api/)
 [![Python 3](https://pyup.io/repos/github/Lucas-far/attempt_api/python-3-shield.svg)](https://pyup.io/repos/github/Lucas-far/attempt_api/)
+[![Build Status](https://travis-ci.org/Lucas-far/project_django_id_1.svg?branch=main)](https://travis-ci.org/Lucas-far/project_django_id_1)
 
 - Download dependencies -> pip install -r requirements.txt
 - You probably need to create a virtual environment
@@ -31,8 +32,8 @@ OPTIONAL (test)
 - DATABASES (printing the variable through terminal)
 - If you can see your data, then things are set correctly
 
-DJANGO COMMANDS
-- python manage.py migrate
-- python manage.py makemigrations
-- python manage.py createsuperuser (http://127.0.0.1:8000/admin)
-- python manage.py runserver (http://127.0.0.1:8000/)
+DJANGO COMMANDS THAT MAY BE NEEDED
+- python manage.py makemigrations (create tables)
+- python manage.py migrate (create migrations)
+- python manage.py createsuperuser (create user to login in development or production) (http://127.0.0.1:8000/admin)
+- python manage.py runserver (run development server) (http://127.0.0.1:8000/)
